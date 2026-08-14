@@ -4,128 +4,701 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Ciboy Travel | Travel & Sewa Mobil</title>
+    <title>Ciboy Travel | Sewa Mobil + Driver | Drop & Door to Door</title>
+
+    <meta name="description" content="Ciboy Travel Cikarang melayani sewa mobil + driver, perjalanan drop, door to door dan paket kilat. Hubungi 081398508484.">
 
     <style>
-        body {
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f5f5f5;
-            color: #222;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
         }
 
-        header {
-            background: #d71920;
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f8fc;
+            color: #172033;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(7, 19, 38, 0.96);
+            backdrop-filter: blur(10px);
+            padding: 15px 6%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
             color: white;
-            padding: 20px;
-            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
         }
 
+        .logo span {
+            color: #00d4ff;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #00d4ff;
+        }
+
+        .nav-btn {
+            background: #00c853;
+            padding: 10px 17px;
+            border-radius: 30px;
+            color: white !important;
+        }
+
+        /* HERO */
         .hero {
-            padding: 70px 20px;
-            text-align: center;
-            background: white;
+            min-height: 100vh;
+            padding: 150px 7% 80px;
+            display: flex;
+            align-items: center;
+            background:
+                linear-gradient(120deg, rgba(3, 14, 32, .95), rgba(0, 74, 120, .80)),
+                url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1800&q=85")
+                center/cover;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: rgba(0, 212, 255, .15);
+            border: 1px solid rgba(0, 212, 255, .5);
+            padding: 8px 16px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            color: #7ceaff;
+            font-weight: bold;
         }
 
         .hero h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
+            font-size: clamp(42px, 7vw, 78px);
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #00d4ff;
         }
 
         .hero p {
             font-size: 20px;
+            max-width: 700px;
+            color: #e4edf7;
+            margin-bottom: 30px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .btn {
             display: inline-block;
-            margin-top: 20px;
-            padding: 15px 25px;
-            background: #25D366;
-            color: white;
             text-decoration: none;
-            border-radius: 8px;
+            padding: 14px 25px;
+            border-radius: 35px;
             font-weight: bold;
+            transition: .3s;
         }
 
-        .layanan {
-            padding: 40px 20px;
-            text-align: center;
+        .btn-wa {
+            background: #00c853;
+            color: white;
+            box-shadow: 0 10px 25px rgba(0, 200, 83, .25);
         }
 
-        .kartu {
+        .btn-wa:hover {
+            transform: translateY(-3px);
+            background: #00a844;
+        }
+
+        .btn-outline {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-outline:hover {
             background: white;
-            max-width: 700px;
-            margin: 15px auto;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            color: #071326;
         }
 
-        footer {
-            background: #111;
+        /* SECTION */
+        section {
+            padding: 80px 7%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #697386;
+        }
+
+        /* SERVICES */
+        .services {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .service {
+            background: white;
+            padding: 30px 22px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 35px rgba(19, 42, 76, .08);
+            transition: .3s;
+            border: 1px solid #edf1f7;
+        }
+
+        .service:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 45px rgba(19, 42, 76, .15);
+        }
+
+        .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .service h3 {
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .service p {
+            color: #687386;
+            font-size: 14px;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #071326;
+            color: white;
+        }
+
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+
+        .about h2 span {
+            color: #00d4ff;
+        }
+
+        .about p {
+            color: #cbd5e1;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .feature {
+            background: rgba(255,255,255,.06);
+            padding: 18px;
+            border-radius: 15px;
+            border: 1px solid rgba(255,255,255,.08);
+        }
+
+        .feature strong {
+            display: block;
+            color: #00d4ff;
+            margin-bottom: 5px;
+        }
+
+        /* PRICE */
+        .price-box {
+            max-width: 900px;
+            margin: auto;
+            background: linear-gradient(135deg, #0077b6, #00b4d8);
+            border-radius: 30px;
+            padding: 50px 30px;
             color: white;
             text-align: center;
-            padding: 25px;
+            box-shadow: 0 20px 50px rgba(0, 119, 182, .25);
+        }
+
+        .price-box h2 {
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .price-box p {
+            margin-bottom: 25px;
+            font-size: 18px;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: white;
+        }
+
+        .contact-container {
+            max-width: 1000px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .contact-card {
+            padding: 30px;
+            background: #f7faff;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid #e7edf6;
+        }
+
+        .contact-card .icon {
+            font-size: 35px;
+        }
+
+        .contact-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .contact-card p {
+            color: #697386;
+            word-break: break-word;
+        }
+
+        /* CTA */
+        .cta {
+            padding: 80px 7%;
+            text-align: center;
+            background:
+                linear-gradient(120deg, #0077b6, #071326);
+            color: white;
+        }
+
+        .cta h2 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .cta p {
+            margin-bottom: 25px;
+            color: #dbeafe;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #030b18;
+            color: #9caabd;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        footer strong {
+            color: white;
+        }
+
+        /* FLOATING WA */
+        .floating-wa {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            width: 62px;
+            height: 62px;
+            border-radius: 50%;
+            background: #00c853;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 30px;
+            box-shadow: 0 8px 25px rgba(0,0,0,.25);
+            z-index: 999;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(0, 200, 83, .5);
+            }
+            70% {
+                box-shadow: 0 0 0 18px rgba(0, 200, 83, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(0, 200, 83, 0);
+            }
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+            nav ul {
+                display: none;
+            }
+
+            .services {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .hero {
+                padding: 130px 6% 70px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero p {
+                font-size: 17px;
+            }
+
+            section {
+                padding: 60px 6%;
+            }
+
+            .services {
+                grid-template-columns: 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2,
+            .about h2,
+            .cta h2 {
+                font-size: 32px;
+            }
+
+            .btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .logo {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <h2>🚗 CIBOY TRAVEL</h2>
-    <p>Travel & Sewa Mobil + Driver</p>
-</header>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="logo">
+            Ciboy<span>Travel</span>
+        </div>
 
-<section class="hero">
-    <h1>Perjalanan Nyaman Bersama Ciboy Travel</h1>
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#layanan">Layanan</a></li>
+            <li><a href="#tentang">Tentang</a></li>
+            <li><a href="#kontak">Kontak</a></li>
+            <li>
+                <a class="nav-btn"
+                   href="https://wa.me/6281398508484?text=Halo%20Ciboy%20Travel,%20saya%20ingin%20bertanya%20tentang%20layanan."
+                   target="_blank">
+                    WhatsApp
+                </a>
+            </li>
+        </ul>
+    </nav>
 
-    <p>
-        Melayani Travel, Drop, Pick Up,
-        dan Sewa Mobil + Driver.
-    </p>
 
-    <a class="btn"
-       href="https://wa.me/6281398508484"
-       target="_blank">
-        💬 Pesan via WhatsApp
+    <!-- HERO -->
+    <section class="hero" id="beranda">
+        <div class="hero-content">
+
+            <div class="badge">
+                🚗 Travel & Transportasi Cikarang
+            </div>
+
+            <h1>
+                Perjalanan Nyaman<br>
+                Bersama <span>Ciboy Travel</span>
+            </h1>
+
+            <p>
+                Melayani <strong>sewa mobil + driver, drop, door to door
+                dan paket kilat</strong> dengan pelayanan ramah, aman dan
+                profesional.
+            </p>
+
+            <div class="buttons">
+                <a class="btn btn-wa"
+                   href="https://wa.me/6281398508484?text=Halo%20Ciboy%20Travel,%20saya%20ingin%20booking."
+                   target="_blank">
+                    💬 Booking via WhatsApp
+                </a>
+
+                <a class="btn btn-outline" href="#layanan">
+                    Lihat Layanan
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- LAYANAN -->
+    <section id="layanan">
+
+        <div class="section-title">
+            <h2>Layanan Kami</h2>
+            <p>Pilih layanan sesuai kebutuhan perjalanan Anda</p>
+        </div>
+
+        <div class="services">
+
+            <div class="service">
+                <div class="icon">🚘</div>
+                <h3>Sewa Mobil + Driver</h3>
+                <p>
+                    Sewa kendaraan bersama driver untuk kebutuhan
+                    perjalanan pribadi maupun keluarga.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="icon">🛣️</div>
+                <h3>Layanan Drop</h3>
+                <p>
+                    Antar penumpang dari titik penjemputan menuju
+                    lokasi tujuan dengan nyaman.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="icon">🏠</div>
+                <h3>Door to Door</h3>
+                <p>
+                    Jemput langsung dari rumah dan antar sampai
+                    alamat tujuan Anda.
+                </p>
+            </div>
+
+            <div class="service">
+                <div class="icon">📦</div>
+                <h3>Paket Kilat</h3>
+                <p>
+                    Pengiriman paket dengan layanan praktis,
+                    cepat dan aman.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- TENTANG -->
+    <section class="about" id="tentang">
+
+        <div class="about-container">
+
+            <div>
+                <h2>
+                    Kenapa Pilih
+                    <span>Ciboy Travel?</span>
+                </h2>
+
+                <p>
+                    Ciboy Travel hadir untuk membantu kebutuhan
+                    transportasi dan perjalanan Anda dari Cikarang
+                    dan sekitarnya.
+                </p>
+
+                <p>
+                    Kami mengutamakan kenyamanan, keamanan,
+                    ketepatan waktu dan pelayanan yang ramah.
+                </p>
+
+                <a class="btn btn-wa"
+                   href="https://wa.me/6281398508484?text=Halo%20Ciboy%20Travel,%20saya%20mau%20tanya%20harga."
+                   target="_blank">
+                    📲 Tanya Harga Sekarang
+                </a>
+            </div>
+
+            <div class="features">
+
+                <div class="feature">
+                    <strong>✓ Nyaman</strong>
+                    Perjalanan lebih nyaman bersama driver.
+                </div>
+
+                <div class="feature">
+                    <strong>✓ Aman</strong>
+                    Mengutamakan keamanan perjalanan.
+                </div>
+
+                <div class="feature">
+                    <strong>✓ Tepat Waktu</strong>
+                    Berusaha memberikan pelayanan tepat waktu.
+                </div>
+
+                <div class="feature">
+                    <strong>✓ Fleksibel</strong>
+                    Melayani kebutuhan perjalanan sesuai tujuan.
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- HARGA / CTA -->
+    <section>
+
+        <div class="price-box">
+
+            <h2>Butuh Kendaraan?</h2>
+
+            <p>
+                Jangan ragu untuk menghubungi Ciboy Travel.
+                Konsultasikan rute, kebutuhan kendaraan dan jadwal
+                perjalanan Anda.
+            </p>
+
+            <a class="btn btn-wa"
+               href="https://wa.me/6281398508484?text=Halo%20Ciboy%20Travel,%20saya%20ingin%20reservasi%20perjalanan."
+               target="_blank">
+                🚗 Reservasi Sekarang
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- KONTAK -->
+    <section class="contact" id="kontak">
+
+        <div class="section-title">
+            <h2>Hubungi Kami</h2>
+            <p>Siap membantu kebutuhan perjalanan Anda</p>
+        </div>
+
+        <div class="contact-container">
+
+            <div class="contact-card">
+                <div class="icon">📱</div>
+                <h3>WhatsApp / Telepon</h3>
+                <p>0813-9850-8484</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📧</div>
+                <h3>Email</h3>
+                <p>ciboy655@gmail.com</p>
+            </div>
+
+            <div class="contact-card">
+                <div class="icon">📍</div>
+                <h3>Lokasi</h3>
+                <p>Cikarang, Jawa Barat</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CTA -->
+    <section class="cta">
+
+        <h2>Siap Berangkat?</h2>
+
+        <p>
+            Booking kendaraan Anda sekarang bersama Ciboy Travel.
+        </p>
+
+        <a class="btn btn-wa"
+           href="https://wa.me/6281398508484?text=Halo%20Ciboy%20Travel,%20saya%20ingin%20booking%20kendaraan."
+           target="_blank">
+            💬 Hubungi Ciboy Travel
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026 <strong>Ciboy Travel</strong>.
+            Travel • Sewa Mobil + Driver • Drop • Door to Door • Paket Kilat
+        </p>
+
+        <p>
+            Cikarang, Jawa Barat
+        </p>
+
+    </footer>
+
+
+    <!-- FLOATING WHATSAPP -->
+    <a class="floating-wa"
+       href="https://wa.me/6281398508484?text=Halo%20Ciboy%20Travel,%20saya%20ingin%20bertanya%20tentang%20layanan."
+       target="_blank"
+       title="Chat WhatsApp">
+        💬
     </a>
-</section>
-
-<section class="layanan">
-
-    <h2>Layanan Kami</h2>
-
-    <div class="kartu">
-        <h3>🚐 Travel Antar Kota</h3>
-        <p>
-            Perjalanan nyaman dan aman untuk kebutuhan Anda.
-        </p>
-    </div>
-
-    <div class="kartu">
-        <h3>🚗 Sewa Mobil + Driver</h3>
-        <p>
-            Sewa kendaraan dengan driver untuk perjalanan pribadi,
-            keluarga maupun pekerjaan.
-        </p>
-    </div>
-
-    <div class="kartu">
-        <h3>📍 Drop & Pick Up</h3>
-        <p>
-            Layanan antar dan jemput sesuai kebutuhan.
-        </p>
-    </div>
-
-</section>
-
-<footer>
-    <h3>Ciboy Travel</h3>
-    <p>📍 Cikarang, Bekasi</p>
-    <p>📞 0813-9850-8484</p>
-    <p>📧 ciboy655@gmail.com</p>
-</footer>
 
 </body>
 </html>
