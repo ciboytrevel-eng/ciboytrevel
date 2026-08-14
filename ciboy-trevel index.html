@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ciboy Travel | Travel & Sewa Mobil + Supir</title>
+<style>
+:root{--r:#d71920;--d:#11151c;--g:#f5c542}*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,sans-serif;background:#f5f6f8;color:#20242a;line-height:1.6}
+header{color:#fff;background:linear-gradient(135deg,#11151c,#252d38 55%,#b20f17);padding:18px 20px 70px}
+nav{max-width:1100px;margin:auto;display:flex;justify-content:space-between;align-items:center}.logo{font-weight:900;font-size:24px}.logo span{color:var(--g)}
+nav a{color:#fff;text-decoration:none;margin-left:18px;font-size:14px;font-weight:bold}
+.hero{max-width:1100px;margin:65px auto 0;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.badge{display:inline-block;padding:7px 12px;border:1px solid #ffffff33;border-radius:30px;background:#ffffff12}
+h1{font-size:52px;line-height:1.05;margin:16px 0}.hero p{font-size:18px;color:#e7e9ed}
+.btn{display:inline-block;padding:14px 20px;border-radius:12px;text-decoration:none;font-weight:800;margin:8px 8px 0 0}.red{background:var(--r);color:#fff}.white{background:#fff;color:#111}
+.hero-card{padding:28px;border-radius:24px;background:#ffffff12;border:1px solid #ffffff33;text-align:center}.car{font-size:90px}
+.wrap{max-width:1100px;margin:-35px auto 60px;padding:0 18px}.card{background:#fff;border-radius:22px;padding:26px;margin-bottom:22px;box-shadow:0 8px 28px #0000000d}
+h2{text-align:center}.center{text-align:center;color:#68717c}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{padding:22px;text-align:center;border:1px solid #e7e9ed;border-radius:16px}.icon{font-size:34px}
+.booking{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}input{width:100%;padding:14px;border:1px solid #d9dee6;border-radius:10px;font-size:15px}
+button{margin-top:12px;padding:14px 20px;border:0;border-radius:10px;background:var(--r);color:#fff;font-weight:800;font-size:15px}
+.promo{border:2px solid #ffd0d0;background:#fff7f7;text-align:center}.promo strong{color:var(--r);font-size:20px}
+.routes{display:grid;grid-template-columns:1fr 1fr;gap:15px}.route{padding:18px;background:#f8f9fa;border-left:5px solid var(--r);border-radius:12px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:15px}.contact a{color:var(--r);font-weight:800}
+footer{background:#11151c;color:#fff;text-align:center;padding:32px 18px}
+@media(max-width:800px){nav div:last-child{display:none}.hero{grid-template-columns:1fr;margin-top:45px}h1{font-size:40px}.booking,.grid,.contact,.routes{grid-template-columns:1fr}}
+@media(max-width:450px){h1{font-size:34px}.booking{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+<nav><div class="logo">CIBOY <span>TRAVEL</span></div>
+<div><a href="#layanan">Layanan</a><a href="#rute">Rute</a><a href="#booking">Booking</a><a href="#kontak">Kontak</a></div></nav>
+<section class="hero">
+<div><div class="badge">📍 Cikarang, Kabupaten Bekasi</div>
+<h1>Travel & Sewa Mobil <span style="color:#f5c542">+ Supir</span></h1>
+<p>Solusi perjalanan untuk keluarga, wisata, bisnis, antar-jemput, dan driver drop. Nyaman, aman, dan mudah dipesan.</p>
+<a class="btn red" href="https://wa.me/6281398508484?text=Halo%20Ciboy%20Travel%2C%20saya%20ingin%20booking." target="_blank">📲 Booking WhatsApp</a>
+<a class="btn white" href="tel:081398508484">☎️ Telepon</a></div>
+<div class="hero-card"><div class="car">🚐</div><h3>Nyaman Sampai Tujuan</h3><p>Travel • Rental Mobil • Driver Drop • Antar Jemput</p></div>
+</section></header>
+
+<main class="wrap">
+<section class="card" id="booking"><h2>📅 Booking Perjalanan</h2><p class="center">Isi data singkat lalu lanjutkan ke WhatsApp admin.</p>
+<div class="booking"><input id="nama" placeholder="Nama"><input id="tanggal" type="date"><input id="jumlah" type="number" min="1" value="1" placeholder="Jumlah penumpang"><input id="jemput" placeholder="Lokasi jemput"></div>
+<button onclick="bookingWA()">Booking via WhatsApp</button></section>
+
+<section class="card promo"><h2>🔥 Ciboy Travel</h2><p><strong>Travel • Sewa Mobil + Supir • Driver Drop</strong></p><p>Hubungi kami untuk harga, rute, dan jadwal sesuai kebutuhan perjalanan Anda.</p></section>
+
+<section id="layanan"><h2>Layanan Kami</h2><p class="center">Siap membantu berbagai kebutuhan perjalanan.</p>
+<div class="grid">
+<div class="feature"><div class="icon">🚐</div><h3>Travel Antar Kota</h3><p>Perjalanan praktis dan nyaman.</p></div>
+<div class="feature"><div class="icon">🚗</div><h3>Sewa Mobil + Supir</h3><p>Untuk keluarga, wisata, bisnis, dan acara.</p></div>
+<div class="feature"><div class="icon">👨‍✈️</div><h3>Driver Drop</h3><p>Antar atau jemput ke tujuan Anda.</p></div>
+<div class="feature"><div class="icon">📍</div><h3>Antar Jemput</h3><p>Layanan penjemputan sesuai kesepakatan.</p></div>
+<div class="feature"><div class="icon">🧳</div><h3>Wisata Keluarga</h3><p>Cocok untuk perjalanan keluarga dan rombongan.</p></div>
+<div class="feature"><div class="icon">💼</div><h3>Perjalanan Bisnis</h3><p>Mendukung kebutuhan perjalanan kerja.</p></div>
+</div></section>
+
+<section class="card" id="rute"><h2>📍 Area & Rute</h2><p class="center">Berbasis di Cikarang dan melayani perjalanan sesuai kebutuhan.</p>
+<div class="routes"><div class="route"><h3>Cikarang & Sekitarnya</h3><p>Antar-jemput dan perjalanan dalam area Cikarang.</p></div>
+<div class="route"><h3>Dalam & Luar Kota</h3><p>Rute perjalanan dapat dikonsultasikan dengan admin.</p></div></div></section>
+
+<section class="card"><h2>⭐ Kenapa Pilih Ciboy Travel?</h2><div class="grid">
+<div class="feature"><div class="icon">🛡️</div><h3>Aman & Nyaman</h3><p>Mengutamakan kenyamanan perjalanan.</p></div>
+<div class="feature"><div class="icon">⏰</div><h3>Tepat Waktu</h3><p>Jadwal dikonfirmasi sebelum berangkat.</p></div>
+<div class="feature"><div class="icon">💬</div><h3>Fast Response</h3><p>Booking mudah melalui WhatsApp.</p></div></div></section>
+
+<section class="card" id="kontak"><h2>📞 Hubungi Ciboy Travel</h2><p class="center">Silakan konsultasikan kebutuhan perjalanan Anda.</p>
+<div class="contact"><div><b>📱 WhatsApp / Telepon</b><p><a href="https://wa.me/6281398508484" target="_blank">0813 9850 8484</a></p></div>
+<div><b>✉️ Email</b><p><a href="mailto:ciboy655@gmail.com">ciboy655@gmail.com</a></p></div>
+<div><b>📍 Lokasi</b><p>Cikarang, Kabupaten Bekasi, Jawa Barat</p></div>
+<div><b>🚗 Layanan</b><p>Travel • Sewa Mobil + Supir • Driver Drop</p></div></div></section>
+</main>
+
+<footer><h2>CIBOY TRAVEL</h2><p>Travel & Sewa Mobil + Supir | Cikarang</p><small>© 2026 Ciboy Travel</small></footer>
+<script>
+function bookingWA(){
+const nama=document.getElementById('nama').value||'-',tanggal=document.getElementById('tanggal').value||'-',jumlah=document.getElementById('jumlah').value||'-',jemput=document.getElementById('jemput').value||'-';
+const pesan=`Halo Ciboy Travel, saya ingin booking.%0A%0ANama: ${nama}%0ATanggal: ${tanggal}%0AJumlah penumpang: ${jumlah}%0ALokasi jemput: ${jemput}%0A%0AMohon info harga, rute, dan jadwal.`;
+window.open('https://wa.me/6281398508484?text='+pesan,'_blank');
+}
+</script>
+</body></html>
